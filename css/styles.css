@@ -47,7 +47,47 @@ img {
   max-width: 100%;
 }
 
-/* <!--~~~~~~~~~~~~~~~~~~~~~Header~~~~~~~~~~~~~~~~~~~~~~~~--> */
+/* scroll-up */
+
+/* 1 close*/
+.scroll-up {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* 2 open */
+.scroll-up.is-open-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00000024;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: hidden;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 3 open bottom  */
+.scroll-up.is-open-scroll.active {
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* scroll style */
+.scroll-up.is-open-scroll.active:hover {
+  transform: scale(1.2);
+}
+.scroll-up__img {
+  opacity: 0.4;
+}
+
+/* <!--~~~~~~~~~~~~~~~~~~~~Header~~~~~~~~~~~~~~~~~~~~~~--> */
 /* ############### @media menu ############### */
 .burger-menu {
   display: none;
@@ -1148,11 +1188,11 @@ img {
   .ws-order {
     padding-top: 72px;
     padding-bottom: 72px;
-	background-image: linear-gradient(
-		rgba(46, 47, 66, 0.7),
-		rgba(46, 47, 66, 0.7)
-	  ),
-	  url(../images/img-name.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/img-name.jpg);
   }
 
   .home-page__title {
