@@ -878,6 +878,7 @@ img {
   position: fixed;
   left: 0;
   top: 0;
+  bottom: 0;
   background-color: rgba(46, 47, 66, 0.4);
   z-index: 999;
   opacity: 1;
