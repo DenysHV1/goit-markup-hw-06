@@ -57,14 +57,9 @@ img {
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.scroll-up.is-open-scroll:hover {
-	transform: scale(1.2);
-}
 
 /* 1 close*/
 .scroll-up {
@@ -92,10 +87,6 @@ img {
 	background-color: #ffffff42;
 	transform: scale(1);
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.scroll-up.is-open-scroll.scroll-color:hover{
-	transform: scale(1.2);
 }
 
 .scroll-up__img {
