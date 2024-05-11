@@ -56,3 +56,8 @@ const scrollUp=document.querySelector('.scroll-up');
 window.addEventListener('scroll', function(){
 	scrollUp.classList.toggle("is-open-scroll", window.scrollY>500)
 })
+
+// change bg bottom, for phone
+window.addEventListener('scroll', function(){
+	scrollUp.classList.toggle("scroll-color", window.scrollY>5500)
+})

@@ -49,11 +49,21 @@ img {
 
 /* scroll-up */
 
+
+
+
 /* 2 open */
 .scroll-up.is-open-scroll {
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-up.is-open-scroll:hover {
+	transform: scale(1.2);
 }
 
 /* 1 close*/
@@ -72,13 +82,16 @@ img {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
+  transform: scale(1);
   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
-.scroll-up.is-open-scroll.active:hover {
-  transform: scale(1.2);
+.scroll-up.is-open-scroll.scroll-color {
+	background-color: #ffffff42;
 }
+
 .scroll-up__img {
   opacity: 0.4;
 }
@@ -103,18 +116,19 @@ img {
   z-index: 999;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* opacity: 0;
+  pointer-events: none; */
+  /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(100%);
 }
 
 .media-menu.is-open-menu {
-  opacity: 1;
-  pointer-events: auto;
+  /* opacity: 1;
+  pointer-events: auto; */
   transform: translateX(0%);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .media-menu-inner {
@@ -633,6 +647,9 @@ img {
   flex-direction: column;
   align-items: center;
 }
+#portfolio {
+	scroll-margin-top: -75px ;
+}
 
 /* список */
 .our-portfolio-list {
@@ -890,6 +907,7 @@ img {
   opacity: 1;
   pointer-events: none;
   opacity: 0;
+  visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -897,6 +915,7 @@ img {
 .modal-overlay.is-open {
   pointer-events: auto;
   opacity: 1;
+  visibility: visible;
 }
 
 .modal-window-inner {
