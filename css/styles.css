@@ -113,27 +113,24 @@ img {
   z-index: 999;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  /* opacity: 0;
-  pointer-events: none; */
-  /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(100%);
 }
 
 .media-menu.is-open-menu {
-  /* opacity: 1;
-  pointer-events: auto; */
+
   transform: translateX(0%);
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .media-menu-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 72px 16px 40px 16px;
-}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding: 72px 16px 40px 16px;
+  }
+
 
 /* кнопка закриття меню */
 .close-media-button {
@@ -195,7 +192,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 168px;
 }
 
 .media-item__link {
@@ -1163,10 +1159,10 @@ img {
 }
 
 /* ''''''''''''''''''''''''''''@media'''''''''''''''''''''''''''''''' */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     /* можу зробити max-width:320; але бургер меню і логотип на деяких екранах будуть виглядати не дуже */
-    max-width: 678px;
+    max-width: 480px;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
@@ -1337,9 +1333,9 @@ img {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1157px) {
+@media (min-width: 768px) and (max-width: 1157px) {
   .container {
-    max-width: 900px;
+    max-width: 768px;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
@@ -1424,11 +1420,7 @@ img {
   /* один із блоків списку */
   .team-list-item {
     width: calc((100% - 24px) / 2);
-    /* max-width: 264px; */ /* Для частково резинової верстки */
-  }
-
-  .team-item__img {
-    width: 100%; /* Для частково резинової верстки */
+    max-width: 264px; 
   }
 
   /*///////the four section "Our PORTFOLIO"//////*/
@@ -1437,10 +1429,6 @@ img {
   .our-portfolio-list {
     align-items: center;
     gap: 72px 24px;
-  }
-
-  .our-portfolio-item__img {
-    width: 100%; /* Для частково резинової верстки */
   }
 
   /* один із блоків списку */
@@ -1456,31 +1444,22 @@ img {
 
   .footer-inner {
     flex-wrap: wrap;
-    justify-content: space-between; /* "center" for adaptive */
+    justify-content: center;
     gap: 72px 24px;
   }
 
   /* ліва частина футера */
   .footer-inner-left {
     margin: 0;
-    display: flex; /* Для частково резинової верстки */
-    flex-direction: column; /* Для частково резинової верстки */
-    align-items: flex-start; /* Для частково резинової верстки */
   }
 
   /* частина із соціальніми мережами */
   .footer-inner-socials {
-    display: flex; /* Для частково резинової верстки */
-    flex-direction: column; /* Для частково резинової верстки */
-    align-items: flex-start; /* Для частково резинової верстки */
     margin-right: 0;
   }
 
   .container-for-form {
-    /* width: 67.5%; */
-    display: flex; /* Для частково резинової верстки */
-    flex-direction: column; /* Для частково резинової верстки */
-    align-items: flex-start; /* Для частково резинової верстки */
+    width: 67.5%;
   }
 
   /* Для частково резинової верстки */
